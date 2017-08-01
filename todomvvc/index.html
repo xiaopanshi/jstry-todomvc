@@ -4,7 +4,7 @@
 	<meta charset="UTF-8">
 	<link rel="stylesheet" href="node_modules/todomvc-app-css/index.css">
 	
-	<script src="js/jquery-3.2.1.min.js"></script>
+	
 	<title>q</title>
 </head>
 <body>
@@ -38,11 +38,25 @@
 					</li>
 				</ul>
 			</section>
+		<footer>fdagdgad</footer>
 
+		<script id="todo-list" type="x-tmpl-mustache">
+		{{#lists}}
+			<li>
+				<div class="view">
+					<input class="toggle" type="checkbox">
+					<label>{Buy a unicorn}</label>
+					<button class="destroy"></button>
+				</div>
+				<input class="edit" value="Rule the web">
+			</li>
+		{{/lists}}
+		</script>
 		<!-- Scripts here. Don't remove ↓ -->
 		<!-- <script src="node_modules/todomvc-common/base.js"></script> -->
 		
-		
-		<script src="js/v1.js"></script>
+		<script src="js/jquery-3.2.1.min.js"></script>
+		<script src="node_modules/mustache/mustache.js"></script>
+		<script src="js/v2.js"></script>
 </body>
 </html>
