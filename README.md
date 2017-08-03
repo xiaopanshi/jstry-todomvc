@@ -1,2 +1,2 @@
 # jstry-todomvc
-[demo]https://xiaopanshi.github.io/jstry-todomvc/
+[demo]https://xiaopanshi.github.io/jstry-todomvc/todomvvc/index
