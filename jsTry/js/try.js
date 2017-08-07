@@ -128,12 +128,94 @@
 // alert(Number({}))
 // alert([{}]==true)
 // 
-var F=function(){};
-		F.prototype.name = "nicholas";
-		F.prototype.age = "29";
-         Object.prototype.a=function(){};
-         Function.prototype .b=function(){};
-         var f=new F();
-         f.name = "miaopeng";
-//          
-var obj = {};
+// var F=function(){};
+// 		F.prototype.name = "nicholas";
+// 		F.prototype.age = "29";
+//          Object.prototype.a=function(){};
+//          Function.prototype .b=function(){};
+//          var f=new F();
+//          f.name = "miaopeng";
+// //          
+// var obj = {};
+
+// var foo = {n:1};
+// (function(foo){            //形参foo同实参foo一样指向同一片内存空间，这个空间里的n的值为1
+//     var foo;               //优先级低于形参，无效。
+//     console.log(foo.n);    //输出1
+//     foo.n = 3;             //形参与实参foo指向的内存空间里的n的值被改为3
+//     foo = {n:2};           //形参foo指向了新的内存空间，里面n的值为2.
+//     console.log(foo.n);    //输出新的内存空间的n的值
+// })(foo);
+// console.log(foo.n); 
+
+// function A() {
+//     // this.do=function() {return 'foo'};
+// }
+// A.prototype=function () {
+// 	// constructor: A
+//     this.do=function() {return 'bar'};
+// };
+// // A.prototype = {n:3333}
+// var x=new A();
+// x.a = {n:3};
+// console.log(x.do)
+// 
+
+// var A = {n:4399};
+
+// var B = function(){this.n = 9999;}
+// var C = function(){var n = 88888;}
+//              
+// B.prototype = A;
+// C.prototype = A;
+
+// var b = new B();
+// var c = new C();
+//  
+// console.log(b.n);
+// console.log(c.n);
+
+
+//远景编程题
+// var foldersize = function(files, clusterSize, folderCount) {
+// 	var clusterCounter = [];
+// 	var residuNum = [];
+// 	var residu = new Array(folderCount), i=residu.length;
+// 	while(i--){residu[i] = 0;}
+// 	for(var x in files){
+// 		var arr = files[x].split(" ");
+// 		clusterCounter = Math.ceil(arr[1] / clusterSize);
+// 		residuNum[arr[0]] = clusterCounter * clusterSize - arr[1];
+// 		residu[arr[0]] = residuNum[arr[0]] + residu[arr[0]];
+
+// 	}
+// 	return residu;
+// } 
+// var files = ["0 55", "0 47", "1 22", "1 21"];
+// var clusterSize = 50;
+// var folderCount = 3;
+// console.log(foldersize(files, clusterSize, folderCount))
+
+
+// function MagicCandy(whichOne) {
+// 	var lastOne; 
+// 	var k;
+// 	var residu = new Array(whichOne), j=whichOne;
+// 	var squre = [];   //删除数组编号
+//  	while(j--){residu[j] = j+1;}
+// 	while(1){
+// 		if(!(residu.length == 1)){
+// 			k = Math.floor(Math.sqrt(residu.length)); //平方下标
+// 			for (var i = 0; i < k; i++) {
+// 				squre[i] = (i+1)*(i+1)-(i+1); 
+// 				residu.splice(squre[i],1);  //中间数组
+// 			}
+// 		}else{
+// 			lastOne = residu[0];
+// 			break;
+// 		}
+// 	}
+// 	return lastOne;
+// }
+// var whichOne = 20;
+// console.log(MagicCandy(whichOne))
