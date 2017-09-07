@@ -1,0 +1,26 @@
+/*双飞翼布局*/
+body{
+	margin: 0
+}
+.main{
+	width:100%;
+	background:#ace;
+	/*padding:0 30% 0 20%;*/
+}
+.left{
+	width:20%; 
+	background:red;
+	margin-left: -100%;
+}
+.right{
+	width:30%; 
+	background:blue;
+	margin-left: -30%;
+}
+.height{
+	height:500px;
+	float: left;
+}
+.mainln{
+	padding:0 30% 0 20%;
+}
